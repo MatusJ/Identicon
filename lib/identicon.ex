@@ -20,7 +20,18 @@ defmodule Identicon do
   def build_grid(%Identicon.Image{hex: hex} = image) do
     hex 
     |> Enum.chunk(3) 
-    #|> mirror_row
+    #|> mirror_all_rows
+  end
+
+  @doc """
+  Change one row, to be mirrored
+  """
+  def mirror_row(row) do
+    # <- pound sign
+    #[145, 46, 200]
+    #[145, 46, 200, 46, 145]
+    [first, second | _tail] = row
+    row ++ [second, first]
   end
 
   @doc """
