@@ -5,7 +5,7 @@ defmodule Identicon.Image do
 
     @doc """
     Defines struct to hold data about image. 
-    Default value is nil. 
+    You can define default value.
     Difference between map and this struct is thath here you can specify only `hex:` property. 
 
     ## Examples
@@ -16,5 +16,5 @@ defmodule Identicon.Image do
         %Identicon.Image{hex: []}
 
     """
-    defstruct hex: nil
+    defstruct hex: nil, color: nil
 end
