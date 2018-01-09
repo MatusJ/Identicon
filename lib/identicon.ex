@@ -11,6 +11,16 @@ defmodule Identicon do
     input 
     |> hash_input
     |> pick_color
+    |> build_grid
+  end
+
+  @doc """
+  Build grid of icon
+  """
+  def build_grid(%Identicon.Image{hex: hex} = image) do
+    hex 
+    |> Enum.chunk(3) 
+    #|> mirror_row
   end
 
   @doc """

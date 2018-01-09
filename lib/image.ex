@@ -6,7 +6,10 @@ defmodule Identicon.Image do
     @doc """
     Defines struct to hold data about image. 
     You can define default value.
-    Difference between map and this struct is thath here you can specify only `hex:` property. 
+    Difference between map and this struct is 
+    that here you can specify properties used, only these you can.
+    Here we use `hex` representing list of integers, 
+    `color` representing RGB color 
 
     ## Examples
 
