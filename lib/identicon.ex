@@ -8,10 +8,12 @@ defmodule Identicon do
   Do all functionality to generates icon, based on input string - user's name
   """
   def main(input) do
-    input |> hash_input
+    input 
+    |> hash_input
   end
 
   def hash_input(input) do
-    
+    :crypto.hash(:md5, "input")
+    |> :binary.bin_to_list
   end
 end
