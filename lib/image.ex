@@ -9,7 +9,9 @@ defmodule Identicon.Image do
     Difference between map and this struct is 
     that here you can specify properties used, only these you can.
     Here we use `hex` representing list of integers, 
-    `color` representing RGB color 
+    `color` representing RGB color of colored squares in icon, 
+    `grid` representing tuples{randomly generated number, 
+    index of square}
 
     ## Examples
 
@@ -19,5 +21,5 @@ defmodule Identicon.Image do
         %Identicon.Image{hex: []}
 
     """
-    defstruct hex: nil, color: nil
+    defstruct hex: nil, color: nil, grid: nil
 end

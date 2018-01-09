@@ -18,9 +18,14 @@ defmodule Identicon do
   Build grid of icon
   """
   def build_grid(%Identicon.Image{hex: hex} = image) do
-    hex 
-    |> Enum.chunk(3) 
-    #|> mirror_all_rows
+    grid = 
+      hex 
+      |> Enum.chunk(3) 
+      |> Enum.map(&mirror_row/1)
+      |> List.flatten
+      |> Enum.with_index
+
+    %Identicon.Image{image | grid: grid}
   end
 
   @doc """
