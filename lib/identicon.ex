@@ -1,18 +1,17 @@
 defmodule Identicon do
   @moduledoc """
-  Documentation for Identicon.
+  Generates icon based on user's name.
+  With same name again and again generates the same icon.
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Identicon.hello
-      :world
-
+  Do all functionality to generates icon based on input string - user's name
   """
-  def hello do
-    :world
+  def main(input) do
+    input |> hash_input
+  end
+
+  def hash_input(input) do
+    
   end
 end
