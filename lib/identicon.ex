@@ -5,7 +5,7 @@ defmodule Identicon do
   """
 
   @doc """
-  Do all functionality to generates icon based on input string - user's name
+  Do all functionality to generates icon, based on input string - user's name
   """
   def main(input) do
     input |> hash_input
